@@ -1,11 +1,9 @@
-pluginPath=${ZSH}/custom/plugins/real-git
+customPath=${ZSH_CUSTOM}
 
-rm -rf ${pluginPath}
+rm -rf ${customPath}/real-git.zsh
 
-git clone https://github.com/sm4sh/real-git.git ${pluginPath}
+curl -o ${customPath}/real-git.zsh https://raw.githubusercontent.com/sm4sh/real-git/master/real-git.zsh
 
 echo
-echo "Open your .zshrc file and add real-git to your plugins."
-echo "You should end up with something like plugins=(git real-git)."
-echo "Then, either restart your terminal or run source ~/.zshrc"
+echo "Restart your terminal to enable"
 echo
