@@ -1,6 +1,4 @@
 function git_prompt_info() {
-echo "lelelel"
-return 0
   local ref
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
