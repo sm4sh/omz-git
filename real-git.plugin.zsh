@@ -1,4 +1,5 @@
 function git_prompt_info() {
+
   local ref
   if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
     ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
@@ -6,7 +7,8 @@ function git_prompt_info() {
 
     branch=$(parse_git_dirty)
     if ! [[ $( echo "$branch" | egrep -i "^dev-[0-9]+") ]]; then
-      exit 0
+      echo "$branch"
+      exit
     fi
     branchshort=$( echo "$branch" | egrep -io "dev-[0-9]+")
 
